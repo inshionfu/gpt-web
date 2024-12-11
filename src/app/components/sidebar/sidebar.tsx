@@ -1,17 +1,17 @@
 import styles from "./sidebar.module.scss";
 
-import ChatGPTIcon from "../icons/chatgpt.svg";
-import ChatIcon from "../icons/chat.svg";
-import RoleIcon from "../icons/role.svg";
-import MaxIcon from "../icons/max.svg";
-import MinIcon from "../icons/min.svg";
-import ExitIcon from "../icons/exit.svg";
+import ChatGPTIcon from "../../icons/chatgpt.svg";
+import ChatIcon from "../../icons/chat.svg";
+import RoleIcon from "../../icons/role.svg";
+import MaxIcon from "../../icons/max.svg";
+import MinIcon from "../../icons/min.svg";
+import ExitIcon from "../../icons/exit.svg";
 
 import {useNavigate} from "react-router-dom";
 import {Path} from "@/app/constants";
 
 import {IconButton} from "@/app/components/button/button";
-import { useAppConfig } from "../store/config";
+import { useAppConfig } from "../../store/config";
 
 
 export function SideBar() {
