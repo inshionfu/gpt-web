@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
 import { Resizable } from "re-resizable";
+import { PropsWithChildren } from "react";
 interface Props {
     minWidth?: number;
 }
