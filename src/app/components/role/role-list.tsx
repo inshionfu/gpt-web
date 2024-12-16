@@ -4,7 +4,7 @@ import {useContext} from "react";
 import React from "react";
 import {DialogResizeableSidebar} from "@/app/components/dialog/dialog-resizeable-sidebar";
 import {Avatar, Spin} from "antd";
-import {Role} from "@/app/types/role";
+import {Role} from "@/types/role";
 import {DialogHead} from "../dialog/dialog-head";
 
 export interface RoleContextType {

@@ -4,7 +4,7 @@ import {RoleContext} from "@/app/components/role/role-list";
 import {createNewMessage, userChatStore} from "@/app/store/chat-store";
 import styles from "./role-detail.module.scss";
 import {Avatar, Button, Tag} from "antd";
-import {MessageRole} from "@/app/types/chat";
+import {MessageRole} from "@/types/chat";
 
 interface Props {
     id: number;

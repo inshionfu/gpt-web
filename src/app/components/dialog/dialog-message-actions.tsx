@@ -4,7 +4,7 @@ import {Select} from 'antd'
 import BreakIcon from "../../icons/break.svg";
 import {userChatStore} from '@/app/store/chat-store';
 import {GptVersion} from '../../constants'
-import {SessionConfig} from "@/app/types/chat";
+import {SessionConfig} from "@/types/chat";
 import { CSSProperties, useRef, useState } from 'react';
 
 export function Action(props: {
@@ -77,12 +77,12 @@ export default function DialogMessagesActions(props: {
             value={config?.gptVersion??GptVersion.GPT_3_5_TURBO}
             style={{ width: 160 }}
             options={[
-                { value: GptVersion.GPT_3_5_TURBO, label: 'gpt-3.5-turbo' },
-                { value: GptVersion.GPT_3_5_TURBO_16K, label: 'gpt-3.5-turbo-16k' },
-                { value: GptVersion.TEXT_DAVINCI_002, label: 'text-davinci-002' },
-                { value: GptVersion.TEXT_DAVINCI_003, label: 'text-davinci-003' },
-                { value: GptVersion.GPT_4, label: 'gpt-4【暂无】' },
-                { value: GptVersion.GPT_4_32K, label: 'gpt-4-32k【暂无】' },
+                { value: GptVersion.GLM_4_Flash, label: 'glm-4-flash' },
+                { value: GptVersion.GLM_4, label: 'glm-4' },
+                { value: GptVersion.GLM_4V, label: 'glm-4-v' },
+                { value: GptVersion.GLM_4_Air, label: 'glm-4-air' },
+                { value: GptVersion.GLM_4_AirX, label: 'glm-4-air-x' },
+                { value: GptVersion.GLM_4_Plus, label: 'glm-4-plus' },
             ]}
             onChange={(value) => {
                 chatStore.updateCurrentSession((session) => {

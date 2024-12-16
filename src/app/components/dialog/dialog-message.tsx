@@ -1,7 +1,7 @@
 import {useLocation, useParams} from 'react-router-dom';
 import styles from "./dialog-message.module.scss";
 import {DialogMessageItem} from "@/app/components/dialog/dialog-message-item";
-import {MessageRole} from "@/app/types/chat";
+import {MessageRole} from "@/types/chat";
 import {DialogMessageInput} from "@/app/components/dialog/dialog-message-input";
 import {createNewMessage, userChatStore} from "@/app/store/chat-store";
 import userScrollToBottom from '@/app/hooks/useScrollToBottom';

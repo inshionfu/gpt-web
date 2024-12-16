@@ -1,6 +1,6 @@
 import styles from './dialog-message-item.module.scss'
 import {Avatar, Space} from "antd";
-import {Message, MessageRole} from "@/app/types/chat";
+import {Message, MessageRole} from "@/types/chat";
 import {RefObject} from 'react';
 import {Markdown} from '@/app/components/markdown/markdown';
 import {CopyOutlined, DeleteOutlined, SyncOutlined} from '@ant-design/icons'
