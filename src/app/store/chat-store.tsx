@@ -4,7 +4,7 @@ import {Dialog, Message, MessageDirection, MessageRole, MessageType, SessionConf
 import {GptVersion} from "@/app/constants";
 import {nanoid} from "nanoid";
 import {completions} from "@/apis";
-import { useAccessStore } from "./access";
+import {useAccessStore} from "./access";
 
 interface ChatStore {
     id: number;
@@ -84,6 +84,17 @@ export function createNewMessage(value: string, role?: MessageRole) {
         streaming: false,
     } as Message;
 }
+
+// export function createNewMessageFromSvr(mmuId: number, role?: MessageRole) {
+//     return {
+//         avatar: role !== MessageRole.user ? "/role/wali.png" : "/role/runny-nose.png",
+//         content: value,
+//         time: Date.now(),
+//         role: role || MessageRole.user,
+//         id: nanoid(),
+//         streaming: false,
+//     } as Message;
+// }
 
 export const userChatStore = create<ChatStore>()(
     persist(

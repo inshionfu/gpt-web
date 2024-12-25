@@ -33,19 +33,22 @@ export function RoleList() {
             <div className={styles["role-list"]}>
                 {!roles ? <Spin spinning style={{margin: '24px auto', width: '100%'}}/> : null}
 
-                {roles?.map((role) => (
-                    <div
-                        className={`${styles["role-item"]} ${selected == role.id ? styles['selected'] : ''}`}
-                        key={role.id}
-                        onClick={() => {
-                            setSelected(role.id)
-                            navigate(`/role/${role.id}`);
-                        }}>
+                {roles?.map((role) => {
+                    console.log(role)
+                    return (
+                        <div
+                            className={`${styles["role-item"]} ${selected == role.mmu.id ? styles['selected'] : ''}`}
+                            key={role.mmu.id}
+                            onClick={() => {
+                                setSelected(role.mmu.id)
+                                navigate(`/role/${role.mmu.id}`);
+                            }}>
 
-                        <Avatar shape="square" size={38} src={role.avatar}/>
-                        <div className={styles["name"]}>{role.role_name}</div>
-                    </div>
-                ))}
+                            <Avatar shape="square" size={38} src={role.mmu.avatar}/>
+                            <div className={styles["name"]}>{role.mmu.role_name}</div>
+                        </div>
+                    )
+                })}
             </div>
         </DialogResizeableSidebar>
     );

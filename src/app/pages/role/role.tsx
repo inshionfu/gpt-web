@@ -11,7 +11,8 @@ export function Role() {
 
     useEffect(() => {
         getRoleList().then((res) => {
-            setRoles(res?.roles);
+            console.log(res)
+            setRoles(res?.data);
         });
     }, [])
 
