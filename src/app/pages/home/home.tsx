@@ -13,7 +13,7 @@ import { RoleDetail } from "@/app/components/role/role-detail";
 import { useAccessStore } from "@/app/store/access";
 
 const Chat = dynamic(async () => (await import("../chat/chat")).Chat);
-const Role = dynamic(async () => (await import("../role/role")).Role);
+const Role = dynamic(async () => (await import("../role/roles")).Roles);
 const Auth = dynamic(async () => (await import("../auth/auth")).Auth);
 
 function Screen() {

@@ -1,9 +1,10 @@
-import { Button, Input } from "antd";
-import styles from "./auth.module.scss";
+import { Button, Input } from "antd"
+import styles from "./auth.module.scss"
 
-import { useNavigate } from "react-router-dom";
-import { useAccessStore } from "../../store/access";
-import GPTIcon from "../../icons/chatgpt.svg";
+import { useNavigate } from "react-router-dom"
+import { useAccessStore } from "../../store/access"
+import GPTIcon from "../../icons/chatgpt.svg"
+import QRCode from "../../icons/qrcode.svg"
 
 export function Auth() {
     const navigate = useNavigate()
@@ -15,10 +16,11 @@ export function Auth() {
             <div className={styles["auth-sub-title"]}>
                 运用Ai提效
             </div>
-            <img src="../../icons/qycode.jpg" style={{width: 250}} />
+            {/* <QRCode></QRCode> */}
+            <img src="https://s2.loli.net/2024/12/26/2PkhCWQOxfNwm9p.png" width={250}/>
             <div className={styles["auth-tips"]}>
                 扫码关注公众号【丝滑打铁】
-                <a href="../../icons/qycode.jpg" target="_blank">
+                <a href="https://sm.ms/image/2PkhCWQOxfNwm9p" target="_blank">
                     回复【403】获取访问密码
                 </a>
             </div>
