@@ -4,8 +4,8 @@ import { MessageRole } from "@/types/chat";
 
 const dataHost = 'http://124.221.174.50'
 // const dataHost = 'http://localhost:8080'
-// const manageHost = 'http://124.221.174.50:8080'
-const manageHost = 'http://localhost:8090'
+const manageHost = 'http://124.221.174.50:8080'
+// const manageHost = 'http://localhost:8090'
 
 export const getRoleList = async () => {
     // 从 apiPost mock 接口获取
