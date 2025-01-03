@@ -1,1 +1,1 @@
-docker run -d --name gpt-web -p 3000:3000 inshion/gpt-web:1.0
+docker run -d --name gpt-web -p 80:3000 inshion/gpt-web:1.0

@@ -29,7 +29,7 @@ WORKDIR /app
 COPY --from=build /app ./
 
 # 暴露 3001 端口
-EXPOSE 3001
+EXPOSE 3000
 
 # 启动应用程序
 CMD ["npm", "start"]
