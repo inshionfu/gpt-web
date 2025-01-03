@@ -7,6 +7,27 @@ const dataHost = 'http://124.221.174.50'
 const manageHost = 'http://124.221.174.50:8080'
 // const manageHost = 'http://localhost:8090'
 
+// 商品列表
+export const queryProductList = () => {
+    return fetch(`${dataHost}/api/v1/sale/product_list`, {
+        method: 'get',
+        headers: getHeaders(),
+    })
+}
+
+// 用户商品下单，获得支付url
+export const createPayOrder = (productId: number) => {
+    return fetch(`${dataHost}/api/v1/sale/create_order`, {
+        method: 'post',
+        headers: {
+            ...getHeaders(),
+            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        body: `productId=${productId}`
+    })
+}
+
+// 角色列表
 export const getRoleList = async () => {
     // 从 apiPost mock 接口获取
     // return fetch(`${host}/api/roles`).then((res) =>
@@ -24,6 +45,7 @@ export const getRoleList = async () => {
     );
 }
 
+// 通过MMUID查询对应的Prompt
 export const getPromptByMMUId = async (
     req: {id : number}
 ) => {
@@ -36,6 +58,7 @@ export const getPromptByMMUId = async (
     );
 }
 
+// 流式对话处理
 export const completions = (data: {
     messages: { content: string; role: MessageRole }[],
     model: GptVersion
@@ -47,6 +70,7 @@ export const completions = (data: {
     })
 }
 
+// 登录接口
 export const login = (token:string) => {
     const accessState = useAccessStore.getState()
     console.log("code=" + accessState.accessCode)

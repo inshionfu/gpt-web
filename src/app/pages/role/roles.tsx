@@ -5,7 +5,7 @@ import {getRoleList} from "@/apis";
 import {RoleContext, RoleList} from "@/app/components/role/role-list";
 import {Outlet} from "react-router-dom";
 
-export function Roles() {
+export default function Roles() {
     const [roles, setRoles] = useState<Role[]>([])
     const [selected, setSelected] = useState<number>(-1);
 

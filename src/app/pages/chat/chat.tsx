@@ -2,7 +2,7 @@ import { DialogList } from '@/app/components/dialog/dialog-list';
 import styles from './chat.module.scss';
 import { Outlet } from 'react-router-dom';
 
-export function Chat() {
+export default function Chat() {
     return (
         <div className={styles["chat"]}>
             <DialogList/>

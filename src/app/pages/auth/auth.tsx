@@ -6,7 +6,7 @@ import { useAccessStore } from "../../store/access"
 import GPTIcon from "../../icons/chatgpt.svg"
 import QRCode from "../../icons/qrcode.svg"
 
-export function Auth() {
+export default function Auth() {
     const navigate = useNavigate()
     const access = useAccessStore()
     return (
